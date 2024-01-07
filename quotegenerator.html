@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        background-color:#335C81 ;
+     }
+     h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+     }
+     button{
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: 30px;
+        background-color:#090809 ;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+     }
+    </style>
+</head>
+<body>
+     <h2>Quotes</h2>
+      <button class ="thebutton" type="submit"> Generate</button>
+
+    <script>
+        const complaint = "Roosevelt";
+        const quoteText = document.querySelector("h2");
+        const sumbitButton = document.querySelector('.thebutton')
+        const heroQuotes = [
+            'The only way to do great work is to love what you do - Steve Jobs',
+            'Life is what happens when you are busy making other plans - John Lennon',
+            'Success is not final, failure is not fatal :It is courage to continue that counts - Winston Churchhill',
+            'The journey of a thousand mile begins with one step. - Lao Tzu',
+            'The best way to predict the future is to create it. - Peter Drucker',
+            'Don\'t count the days; make the days count. - Muhammad Ali',
+            'Your time is limited,dont waste it living someone else\s  life. - Steve Job',
+            `The only limit to Our realization of tomorrow will be our doubts of today. - Franklin D. ${complaint}`
+        ];
+        sumbitButton.onclick = function generate(quotes) {
+         
+            let randomIndex = Math.floor( Math.random() * heroQuotes.length );  
+            const randomQuote = heroQuotes[randomIndex]                     
+            quoteText.innerHTML = randomQuote ;
+        } 
+
+
+
+       
+    
+    </script>
+</body>
+</html>
